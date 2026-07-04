@@ -337,8 +337,27 @@ The following are intentionally **not included**:
 
 ---
 
-# Disclaimer
+# Documentation
 
-This repository is intended solely as a technical portfolio showcasing the design and implementation of the project.
+Additional project documentation is available in:
 
-The original firmware, datasets, machine learning models, and academic report remain private and are therefore not distributed through this repository.
+- **docs/system_overview.md** – Overall system architecture
+- **docs/pseudocode.md** – High-level firmware logic
+- **docs/ml_pipeline.md** – TinyML and anomaly detection workflow
+
+---
+
+# Notice
+
+This repository is provided for portfolio and educational purposes only.
+
+The following components are intentionally excluded:
+
+- Firmware source code
+- TensorFlow Lite model
+- Training scripts
+- Experimental datasets
+- Raw sensor logs
+- Full academic report
+
+If you would like to discuss the project or its implementation, feel free to reach out.
