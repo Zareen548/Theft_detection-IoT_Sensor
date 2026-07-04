@@ -249,7 +249,7 @@ Median Absolute Deviation (MAD) was selected as the primary statistical feature 
 The Autoencoder reconstruction error (MSE) was analyzed to determine the optimal anomaly detection threshold.
 
 <p align="center">
-<img src="results/threshold_detection.png" width="700">
+<img src="results/threshold.png" width="700">
 </p>
 
 ---
