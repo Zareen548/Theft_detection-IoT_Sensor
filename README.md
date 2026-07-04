@@ -53,6 +53,17 @@ The complete system was implemented on an **ESP32-S2** microcontroller using mul
 
 ---
 
+# Hardware Prototype
+
+The prototype integrates environmental and motion sensors with the ESP32-S2 on a portable battery-powered platform.
+
+<p align="center">
+<img src="diagrams/hardware_setup.png" width="700">
+</p>
+
+---
+
+
 # Software Stack
 
 - Arduino IDE
@@ -211,28 +222,47 @@ The prototype was evaluated under multiple real-world scenarios, including:
 The proposed approach successfully differentiated natural environmental movement from actual theft attempts while minimizing false alarms.
 
 ---
+# Experimental Results
 
-# Key Features
+## Normal vs. Anomalous Motion
 
-- Edge AI (TinyML) inference on ESP32
-- Real-time anomaly detection
-- Multi-sensor fusion
-- Lightweight Autoencoder model
-- Low computational overhead
-- Real-time buzzer alerts
-- Battery-powered portable operation
-- Suitable for remote IoT deployments
+The following figure compares normal environmental movement with suspicious device handling using accelerometer measurements.
+
+<p align="center">
+<img src="results/normal_vs_anomaly.png" width="850">
+</p>
 
 ---
 
-# Results Summary
+## Feature Engineering
 
-The proposed framework demonstrated:
+Median Absolute Deviation (MAD) was selected as the primary statistical feature because of its robustness to noise and outliers.
 
-- Reliable anomaly detection
-- Reduced false positives compared to simple threshold methods
-- Faster inference using a lightweight Autoencoder compared to a CNN-based approach
-- Successful deployment on resource-constrained embedded hardware
+<p align="center">
+<img src="results/mad_analysis.png" width="700">
+</p>
+
+---
+
+## Threshold Selection
+
+The Autoencoder reconstruction error (MSE) was analyzed to determine the optimal anomaly detection threshold.
+
+<p align="center">
+<img src="results/threshold_detection.png" width="700">
+</p>
+
+---
+
+## Performance Comparison
+
+A lightweight Autoencoder was compared against a CNN-based approach on the ESP32 platform.
+
+<p align="center">
+<img src="results/reaction_time_table.png" width="650">
+</p>
+
+The Autoencoder achieved significantly lower inference latency while maintaining reliable anomaly detection, making it better suited for deployment on resource-constrained embedded devices.
 
 ---
 
